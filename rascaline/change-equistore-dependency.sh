@@ -8,7 +8,7 @@ mkdir tmp
 cd tmp
 tar xf ../rascaline-*.tar.gz
 RASCALINE_DIR=`ls`
-sed -i "" -e "s|equistore @ https://github.com/lab-cosmo/equistore/archive/513889.zip|equistore|" ${RASCALINE_DIR}/setup.cfg
+sed -i "" -e "s|equistore @ https://github.com/lab-cosmo/equistore/archive/eb3800.zip|equistore|" ${RASCALINE_DIR}/setup.cfg
 tar czf ${RASCALINE_DIR}.tar.gz ${RASCALINE_DIR}
 
 rm -rf ${RASCALINE_DIR}
@@ -19,7 +19,7 @@ for path in `ls ../*.whl`; do
     cd $wheel-dir
     unzip ../$path
 
-    sed -i "" -e "s|equistore @ https://github.com/lab-cosmo/equistore/archive/513889.zip|equistore|" *.dist-info/METADATA
+    sed -i "" -e "s|equistore @ https://github.com/lab-cosmo/equistore/archive/eb3800.zip|equistore|" *.dist-info/METADATA
 
     zip -r ../$wheel *
     cd ..
